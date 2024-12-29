@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "Creating a ring with a single sphere"
+date:   2024-12-20 14:57:01 +0000
+categories: university 3d
+---
+
+As part of my Master's degree at the University of Sheffield I elected to study 3D computer graphics under [Dr Steve Maddock][stevemaddock].
+
+As university is often theoretical the more practical nature of the course appealed to me compared to others.
+
+The course was assessed by two assignments, one of which we will discuss here:
+
+Assignment 1 - An animated scene with OpenGL
+
+![Room depiction in assignment brief](/assets/spaceship/fig1.png)
+
+In the words of the assignment brief:
+
+"2
+3. Requirements
+Figure 1 shows a scene set in a room on a
+spaceship. The whole scene should be modelled
+using transformed flat planes, cubes and spheres.
+The view through the window is space (i.e. stars,
+etc)."
+
+We were given creative liberty on the head of the dancing robot in the rear left. 
+
+![Possible head designs for the robot](/assets/spaceship/head-briefing.png)
+
+I wanted to make Auto from Wall-E.
+
+![Screenshot of Auto from the movie WALL-E](/assets/spaceship/auto.png)
+
+![Auto concept art from the movie WALL-E](/assets/spaceship/auto-concept-art.jpg)
+
+Auto's design, which is based on the captain's wheel of a traditional sailing ship, features an outer "ring" ordained with handles. As the assignment was limited to planes, cubes and spheres this would be a challenge to model.
+
+While Auto's face and handles could be modelled with stretched spheres, the ring could not. I considered several approaches such as:
+
+-creating a custom "ring" data type (this would not model the gap at the top and didn't meet the assginment constraints)
+
+-creating a fake "ring" out of a large number of spheres chained together (hard to implement and impossible to texture)
+
+In the end I came up with the solution of using alpha blending with my shader. This involved creating a flattened sphere and applying a texture crafted so that the middle of the very flat sphere would appear transparent - leaving just the edge to give the appearance of a "ring". From this a texture could be applied to give the appropriate black/white highlights and the handles attached at appropriate positions.
+
+![Auto model front wireframe](/assets/spaceship/front-of-head.jpg)
+
+![Auto model rear wireframe](/assets/spaceship/back-of-head.jpg)
+
+![Auto model shaded](/assets/spaceship/front-shaded.jpg)
+
+
+Makign the skybox.
+
+[stevemaddock]: https://staffwww.dcs.shef.ac.uk/people/S.Maddock/index.shtml
