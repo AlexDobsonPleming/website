@@ -1,0 +1,47 @@
+---
+layout: home
+---
+
+<link rel="stylesheet" href="/assets/about/about.css">
+
+<main>
+    <div class="profile">
+        <img src="assets/about/me.jpg" alt="an image of me holding a chicken"/>
+        <div class="profile-text">
+            <h1 class="page-heading">Alexander Dobson-Pleming</h1>
+            <p>Go-anywhere software engineer from England with experience in building novel data systems in the NHS</p>
+        </div>
+    
+    </div>
+    
+    <h2> About Me</h2>
+    <p> to add</p>
+    
+    <h2> Projects </h2>
+    <p> to add</p>
+
+    {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+        {%- for post in site.posts -%}
+        <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+            </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+        {%- endif -%}
+        </li>
+        {%- endfor -%}
+    </ul>
+    {%- endif -%}
+
+    <a href="/posts/">View all posts ></a>
+</main>
+
+
+
