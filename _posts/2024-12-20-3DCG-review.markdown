@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating a ring with a single sphere"
 date:   2024-12-20 14:57:01 +0000
-categories: university 3d
+categories: university 3d highlight
 ---
 
 As part of my Master's degree at the University of Sheffield I elected to study 3D computer graphics under [Dr Steve Maddock][stevemaddock].

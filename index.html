@@ -15,27 +15,33 @@ layout: home
     </div>
     
     <h2> About Me</h2>
-    <p> to add</p>
+    <p> I'm an experienced software engineer with a proven track record of delivering and end to end solutions to real world problems. I've worked to apply a wide variety of technologies and frameworks to fit each problem with an appropriate solution. In my 5 years working in the NHS I've worked with clinicians to propose, build and maintain web applications, data warehousing systems, desktop apps and more. </p>
     
     <h2> Projects </h2>
-    <p> to add</p>
+    <ul>
+        <li>PINPOINT Workbook - an alternative data collection tool developed for NHS Lothian's nationwide PINPOINT study. By working with the clinical lead investigator the tool became the most popular and was used by 50 clinical teams across the NHS for 5 years. The results of the study were presented at ECCO 2024.</li>
+        <li>Extract Filter Tool - A novel solution to multiple new regulatory barriers around working with sensitive health data. This was well received and used by ~30 NHS Trusts across the UK for uploading data. The problem this solved is still faced by many large organisations today, and the tool has received interest from the Royal College of Physicians. </li>
+        <li>Web Local - a self-proposed research project at the University of Sheffield on a novel method of processing data that bypasses the difficulties from regulation in working with sensitive clinical data. You can read it <a href="https://drive.google.com/file/d/10LhxAPmQsjt0K6mb2MyVnrWkHTXwSayy/view?usp=sharing">here</a>.</li>
+    </ul>
 
     {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
         {%- for post in site.posts -%}
-        <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-            </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-        {%- endif -%}
-        </li>
+            {%- if post.categories contains "highlight" -%}
+                <li>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="post-meta">{{ post.date | date: date_format }}</span>
+                <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                    </a>
+                </h3>
+                {%- if site.show_excerpts -%}
+                    {{ post.excerpt }}
+                {%- endif -%}
+                </li>
+            {%- endif -%}
         {%- endfor -%}
     </ul>
     {%- endif -%}
