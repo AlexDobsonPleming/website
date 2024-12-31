@@ -25,3 +25,13 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+.socials img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin: 0 10px; /* Spacing between icons */
+}
+
+.socials a {
+    text-decoration: none;
+}
