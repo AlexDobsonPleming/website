@@ -37,7 +37,7 @@ It's GUI-based and built in Visual Studio using .NET, with a simple copy–paste
 You can copy the table output directly into Excel to generate performance graphs.  
 Just avoid copying the "Length" column, as Excel may treat it as another data series.
 
-![how to make graphs](https://github.com/user-attachments/assets/1a1a9e87-6ec5-4e30-8aa7-a6c6affcc3ae)
+![how to make graphs](/assets/parallel_runner/charting.png)
 
 ---
 
@@ -45,11 +45,11 @@ Just avoid copying the "Length" column, as Excel may treat it as another data se
 
 **Product of Differences**
 
-![Product of Differences](https://github.com/user-attachments/assets/f1a7bfbd-a165-4755-8777-871c96aef746)
+![Product of Differences](/assets/parallel_runner/product%20of%20differences.png)
 
 **Chromatic Aberration**
 
-![Chromatic Aberration](https://github.com/user-attachments/assets/f34354ac-29c2-4a7f-aef9-25995f25bd64)
+![Chromatic Aberration](/assets/parallel_runner/ca.png)
 
 ---
 
